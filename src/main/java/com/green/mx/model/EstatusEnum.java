@@ -1,7 +1,7 @@
 package com.green.mx.model;
 
 public enum EstatusEnum {
-	
+
 	/**
 	 * Consulta existosa
 	 */
@@ -14,17 +14,17 @@ public enum EstatusEnum {
 	 * Error servidor
 	 */
 	ERROR("5","Ocurrió un error al ejecutar la operación, intente más tarde.");
-	
+
 	/**
 	 * Codigo de respuesta
 	 */
 	private final String codigo;
-	
+
 	/**
 	 * Descripcion del mensaje de respuesta
 	 */
 	private final String mensaje;
-	
+
 	/**
 	 *Constructor de la clase
 	 */
@@ -33,7 +33,7 @@ public enum EstatusEnum {
 		this.mensaje = mensaje;
 
 	}
-	
+
 	/**
 	 * Get codigo
 	 * @return {String}
@@ -41,7 +41,7 @@ public enum EstatusEnum {
 	public String getCodigo() {
 		return codigo;
 	}
-	
+
 	/**
 	 * Get Mensaje
 	 * @return {String}

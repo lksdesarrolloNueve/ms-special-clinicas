@@ -9,13 +9,13 @@ import com.green.mx.service.IEmpresaService;
 
 @Service
 public class ImplEmpresaService implements IEmpresaService{
-	
+
 	/**
 	 * INSTANCIA DE ACCESO A DATOS
 	 */
 	@Autowired
 	private IGestionDAO<String> daoEmpresas;
-	
+
 	/**
 	 * Query para CRUDS de Empresas
 	 */

@@ -8,28 +8,28 @@ public class CatFormaPago implements Serializable{
 	 * Serial Id de la clase
 	 */
 	private static final long serialVersionUID = -7835255327679219002L;
-	
-	
+
+
 	/**
 	 * Id forma pago
 	 */
 	private Integer formaPagoId;
-	
+
 	/**
 	 * Clave forma pago
 	 */
 	private String claveFPago;
-	
+
 	/**
 	 * Descripcion forma pago
 	 */
 	private String descripcion;
-	
+
 	/**
 	 * Iconco
 	 */
 	private String icono;
-	
+
 	/**
 	 * Estatus forma pago
 	 */
@@ -104,8 +104,8 @@ public class CatFormaPago implements Serializable{
 	public void setEstatus(boolean estatus) {
 		this.estatus = estatus;
 	}
-	
-	
-	
-	
+
+
+
+
 }

@@ -28,7 +28,7 @@ import com.green.mx.service.IDinamicoService;
 @CrossOrigin("*")
 @RequestMapping("/special")
 public class EmpresaController {
-	
+
 	/**
 	 * Constante JSON
 	 */
@@ -40,25 +40,25 @@ public class EmpresaController {
 	// Instancia service dinamico
 	@Autowired
 	private IDinamicoService service;
-	
-	
-	
+
+
+
 	@PostMapping(path = "/empresa", consumes = JSON_PROD_CONS, produces = JSON_PROD_CONS)
 	public String crudEmpresa(@AuthenticationPrincipal Jwt jwt, @RequestBody Request request) throws JsonMappingException, JsonProcessingException {
-		
+
 		String resEmpresa = service.execQueryDinamico(request, QUERY_CRUD_EMPRESA);
-		
+
 		ObjectMapper mapper = new ObjectMapper();
 		JsonNode jsonNode = mapper.readTree(resEmpresa);
 
 		System.out.println(jsonNode.get("codigo").asInt() + " "+jsonNode.get("mensaje").asText());
-		
+
 		//if (jsonNode.get("codigo").asInt() == 1) {
-		
+
 		String userId = jwt.getSubject();
-		
+
 		System.out.println("Este es el usuario "+userId);
-		
+
 		Keycloak keycloak = KeycloakBuilder.builder()
 			    .serverUrl("http://localhost:8080")
 			    .realm("master")
@@ -79,11 +79,11 @@ public class EmpresaController {
 		user.setAttributes(attributes);
 
 		userResource.update(user);
-		
+
 		//}
-		
+
 		return resEmpresa;
 	}
-	
+
 
 }

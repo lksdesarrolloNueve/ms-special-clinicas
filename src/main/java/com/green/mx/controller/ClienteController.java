@@ -32,7 +32,7 @@ public class ClienteController {
 
 	/**
 	 * API que retorna una lista de clientes
-	 * 
+	 *
 	 * @param accion - 1. Todos los clientes, 2. Clientees Activos, 3. Clientes inactivos
 	 * @return {@link Estatus<Cliente>} - Estado de la solicitud con lista
 	 */
@@ -43,7 +43,7 @@ public class ClienteController {
 
 	/**
 	 * API que permite crear, modificar, baja de clientes
-	 * 
+	 *
 	 * @param request - Información con los datos a guardar, con accion a realizar
 	 * @return {@link Estatus<Cliente>} - Estado de la solicitud
 	 */

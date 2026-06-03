@@ -3,14 +3,14 @@ package com.green.mx.model.response;
 import java.io.Serializable;
 
 public class Rol implements Serializable{
-	
+
 	/**
 	 * serial id de la clase
 	 */
 	private static final long serialVersionUID = -7432413743019007362L;
 
 	private Integer rolID;
-	
+
     private String nombre;
 
 
@@ -63,8 +63,8 @@ public class Rol implements Serializable{
 	public void setEstatus(Boolean estatus) {
 		this.estatus = estatus;
 	}
-    
-    
-    
+
+
+
 
 }

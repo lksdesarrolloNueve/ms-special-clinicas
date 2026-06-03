@@ -3,22 +3,22 @@ package com.green.mx.model.response;
 import java.io.Serializable;
 
 public class Stock implements Serializable{
-	
+
 	/**
 	 * Serial ID de la clase
 	 */
 	private static final long serialVersionUID = 4247219594051178031L;
 
 	private Integer productoID;
-	
+
 	private String producto;
-	
+
 	private Long totalStock;
-	
+
 	private Integer minStock;
-	
+
 	private Integer maxStock;
-	
+
 	private String almacen;
 
 	/**
@@ -104,7 +104,7 @@ public class Stock implements Serializable{
 	public void setAlmacen(String almacen) {
 		this.almacen = almacen;
 	}
-	
-	
+
+
 
 }

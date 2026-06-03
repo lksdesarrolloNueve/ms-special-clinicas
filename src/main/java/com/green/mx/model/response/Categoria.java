@@ -3,20 +3,20 @@ package com.green.mx.model.response;
 import java.io.Serializable;
 
 public class Categoria implements Serializable{
-	
+
 	/**
 	 * Serial ID de la clase
 	 */
 	private static final long serialVersionUID = 3529663434971857887L;
 
 	private Integer categoriaID;
-	
+
     private String nombre;
 
     private String descripcion;
-    
+
     private Boolean estatus;
-    
+
     private String cveCategoria;
 
 	/**
@@ -88,6 +88,6 @@ public class Categoria implements Serializable{
 	public void setCveCategoria(String cveCategoria) {
 		this.cveCategoria = cveCategoria;
 	}
-    
+
 
 }

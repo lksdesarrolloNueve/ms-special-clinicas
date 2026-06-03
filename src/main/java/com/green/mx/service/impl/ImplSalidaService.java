@@ -18,18 +18,18 @@ public class ImplSalidaService implements ISalidaService{
 	 * QUERY PARA OBTENER LOS ALAMCENES DEPENDIENDO DE LA ACCION
 	 */
 	private String queryGetList ="SELECT * FROM almacen.get_salidas(?,?,?,?);";
-	
+
 	/**
 	 * Query para CRUDS de Alamcenes
 	 */
 	private String queryCRUDSalida = "SELECT * FROM almacen.crud_salida(?,?)";
-	
+
 	/**
 	 * INSTANCIA DE ACCESO A DATOS
 	 */
 	@Autowired
 	private IGestionDAO<Salida> daoSalida;
-	
+
 	/**
 	 * Metodo para retornar una lista de Salidas
 	 * @param request - Info Request con los filtros a aplicar
@@ -37,17 +37,17 @@ public class ImplSalidaService implements ISalidaService{
 	 */
 	@Override
 	public Estatus<Salida> getSalidas(RequestGetPaginado request) {
-		return daoSalida.getList(queryGetList,  
-				new Object[] {request.getFiltros(), request.getAccion(), 
-						request.getNoPagina(), request.getTamPagina()}, 
+		return daoSalida.getList(queryGetList,
+				new Object[] {request.getFiltros(), request.getAccion(),
+						request.getNoPagina(), request.getTamPagina()},
 				new SalidasMapper());
 	}
 
-	
+
 	/**
 	 * Metodo para permitir crear, modificar, baja de Salidas
-	 * @param request - Información con los datos a guardar, con accion a realizar 
-	 * @return {@link Estatus<Salida>} - Estado de la solicitud 
+	 * @param request - Información con los datos a guardar, con accion a realizar
+	 * @return {@link Estatus<Salida>} - Estado de la solicitud
 	 */
 	@Override
 	public Estatus<Salida> crudSalida(Request request) {

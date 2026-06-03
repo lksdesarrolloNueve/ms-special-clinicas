@@ -18,18 +18,18 @@ import com.green.mx.service.IProveedorService;
 @CrossOrigin("*")
 @RequestMapping("/warehouse")
 public class ProveedorController {
-	
+
 	/**
 	 * Constante de JSON
 	 */
 	private static final String JSON_PROD_CONS = "application/json;charset=UTF-8";
-	
+
 	/**
 	 * Instancia de acceso al service
 	 */
 	@Autowired
 	private IProveedorService service;
-	
+
 	/**
 	 * Metodo para retornar una lista de Proveedores
 	 * @param accion - 1. Todos los Proveedores, 2. Proveedores Activos, 3. Proveedores inactivos
@@ -39,11 +39,11 @@ public class ProveedorController {
 	public Estatus<Proveedor> getProveedores(@PathVariable(value ="accion")Integer accion){
 		return service.getProveedores(accion);
 	}
-	
+
 	/**
 	 * Que para permitir crear, modificar, baja de Proveedores
-	 * @param request - Información con los datos a guardar, con accion a realizar 
-	 * @return {@link Estatus<Proveedor>} - Estado de la solicitud 
+	 * @param request - Información con los datos a guardar, con accion a realizar
+	 * @return {@link Estatus<Proveedor>} - Estado de la solicitud
 	 */
 	@PostMapping(path = "/crudProveedor",consumes = JSON_PROD_CONS,produces = JSON_PROD_CONS)
 	public Estatus<Proveedor> crudProveedor(@RequestBody RequestProveedor request){

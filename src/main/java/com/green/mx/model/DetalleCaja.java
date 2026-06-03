@@ -4,29 +4,29 @@ import java.io.Serializable;
 import java.math.BigDecimal;
 
 public class DetalleCaja implements Serializable{
-	
-	
+
+
 	/**
 	 * Serial ID de la clase
 	 */
 	private static final long serialVersionUID = 962752269532825722L;
 
 	private String fApertura;
-	
+
 	private String fCierre;
-	
+
 	private String comentarioA;
-	
+
 	private String comentarioC;
-	
+
 	private BigDecimal saldoInicialSistema;
-	
-	private BigDecimal saldoInicialCajero; 
-	
+
+	private BigDecimal saldoInicialCajero;
+
 	private BigDecimal saldoFinalSistema;
-	
+
 	private BigDecimal saldoFinalCajero;
-	
+
 	private BigDecimal diferencia;
 
 	/**
@@ -154,7 +154,7 @@ public class DetalleCaja implements Serializable{
 	public void setDiferencia(BigDecimal diferencia) {
 		this.diferencia = diferencia;
 	}
-	
-	
+
+
 
 }

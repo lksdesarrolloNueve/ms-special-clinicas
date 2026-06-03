@@ -11,12 +11,12 @@ import com.green.mx.service.ICatOperacionService;
 
 @Service
 public class ImplCatOperacionService implements ICatOperacionService  {
-	
+
 	/**
 	 * QUERY PARA OBTENER LAS CAJAS DEPENDIENDO DE LA ACCION
 	 */
 	private String queryGetList ="SELECT * FROM almacen.get_operaciones(?);";
-	
+
 
 	/**
 	 * INSTANCIA DE ACCESO A DATOS
@@ -24,7 +24,7 @@ public class ImplCatOperacionService implements ICatOperacionService  {
 	@Autowired
 	private IGestionDAO<CatOperacion> daoCatOperacion;
 
-	
+
 	/**
 	 * Que para retornar una lista de operaciones
 	 * @param accion 1 todos, 2 activos, 3 inactivos
@@ -32,10 +32,10 @@ public class ImplCatOperacionService implements ICatOperacionService  {
 	 */
 	@Override
 	public Estatus<CatOperacion> getCatOperacion(Integer accion) {
-		return daoCatOperacion.getList(queryGetList,  
+		return daoCatOperacion.getList(queryGetList,
 				new Object[] { accion},
 				new CatOperacionMapper());
 	}
-	
+
 
 }

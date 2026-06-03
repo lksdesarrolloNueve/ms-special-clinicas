@@ -33,7 +33,7 @@ public class ImplGestionDAO<T> implements IGestionDAO<T> {
 
 	/**
 	 * Metodo que retornara una consulta desde una funcion
-	 * 
+	 *
 	 * @param query  - Query a consultar
 	 * @param params - PArametros a filtrar
 	 * @return {@link Estatus<T>} Info generica a retormnar
@@ -51,14 +51,14 @@ public class ImplGestionDAO<T> implements IGestionDAO<T> {
 			}
 
 			if (list.isEmpty()) {
-				estatus = new Estatus<T>(EstatusEnum.DATOS_NO_ENCONTRADOS);
+				estatus = new Estatus<>(EstatusEnum.DATOS_NO_ENCONTRADOS);
 			} else {
-				estatus = new Estatus<T>(EstatusEnum.CONS_EXITOSA);
+				estatus = new Estatus<>(EstatusEnum.CONS_EXITOSA);
 				estatus.setLista(list);
 			}
 
 		} catch (DataAccessException e) {
-			estatus = new Estatus<T>(EstatusEnum.ERROR);
+			estatus = new Estatus<>(EstatusEnum.ERROR);
 		}
 
 		return estatus;
@@ -66,7 +66,7 @@ public class ImplGestionDAO<T> implements IGestionDAO<T> {
 
 	/**
 	 * Metodo que recibe un crud
-	 * 
+	 *
 	 * @param query  - Crud a ejecutar
 	 * @param params - Parametros a registrar
 	 * @return {@link Estatus<T>} Info generica a retormnar

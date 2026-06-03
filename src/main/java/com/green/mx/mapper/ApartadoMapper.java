@@ -11,9 +11,9 @@ public class ApartadoMapper implements RowMapper<Apartado> {
 
 	@Override
 	public Apartado mapRow(ResultSet rs, int rowNum) throws SQLException {
-		
+
 		var apartado = new Apartado();
-		
+
 		apartado.setIdApartado(rs.getLong(1));
 		apartado.setCveApartado(rs.getString(2));
 		apartado.setAlmacen(rs.getString(3));
@@ -26,7 +26,7 @@ public class ApartadoMapper implements RowMapper<Apartado> {
 		apartado.setMontoResta(rs.getBigDecimal(10));
 		apartado.setEstatus(rs.getString(11));
 		apartado.setProductos(rs.getString(12));
-		
+
 
 		return apartado;
 	}

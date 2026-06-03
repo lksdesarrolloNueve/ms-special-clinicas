@@ -12,7 +12,7 @@ public class ProveedorMapper implements RowMapper<Proveedor>{
 	@Override
 	public Proveedor mapRow(ResultSet rs, int rowNum) throws SQLException {
 		var proveedor = new Proveedor();
-		
+
 		proveedor.setProveedorID(rs.getInt(1));
 		proveedor.setNombre(rs.getString(2));
 		proveedor.setTelefono(rs.getString(3));

@@ -4,21 +4,21 @@ package com.green.mx.model.response;
 import com.green.mx.model.DetalleCaja;
 
 public class SesionCaja {
-	
+
 	private Long idSesionCaja;
-	
+
 	private Boolean abierta;
-	
+
 	private String idUsuario;
-	
+
 	private String usuario;
 
 	private Integer idCaja;
-	
+
 	private String cveCaja;
-	
+
 	private String descCaja;
-	
+
 	private DetalleCaja detalleCaja;
 
 	/**
@@ -132,8 +132,8 @@ public class SesionCaja {
 	public void setDetalleCaja(DetalleCaja detalleCaja) {
 		this.detalleCaja = detalleCaja;
 	}
-	
-	
-	
+
+
+
 
 }

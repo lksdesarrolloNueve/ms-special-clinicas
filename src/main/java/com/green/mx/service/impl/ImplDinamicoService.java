@@ -12,7 +12,7 @@ import com.green.mx.service.IDinamicoService;
 
 @Service
 public class ImplDinamicoService implements IDinamicoService{
-	
+
 	@Autowired
 	private IDinamicoDAO dao;
 
@@ -23,21 +23,21 @@ public class ImplDinamicoService implements IDinamicoService{
 	 * @return {@link String} - Info de la Función
 	 */
 	@Override
-	public String execQueryDinamico(Request request, 
+	public String execQueryDinamico(Request request,
 			String query) {
 		var resultado = "";
 		try {
-			var json = 
+			var json =
 					new ObjectMapper().writeValueAsString
 					(request.getDatos());
-			
-			resultado = dao.execQuery(query, 
+
+			resultado = dao.execQuery(query,
 					new Object[]{ json, request.getAccion() });
-			
+
 		} catch (JsonProcessingException e) {
 			resultado ="{\"codigo\":5,\"mensaje\":\""+e.getMessage()+"\"}";
 		}
-		
+
 		return resultado;
 	}
 
@@ -45,17 +45,17 @@ public class ImplDinamicoService implements IDinamicoService{
 	public String execQueryDinamicoTenant(RequestTenant request, String query) {
 		var resultado = "";
 		try {
-			var json = 
+			var json =
 					new ObjectMapper().writeValueAsString
 					(request.getDatos());
-			
-			resultado = dao.execQuery(query, 
+
+			resultado = dao.execQuery(query,
 					new Object[]{ json, request.getTenantID(),request.getAccion() });
-			
+
 		} catch (JsonProcessingException e) {
 			resultado ="{\"codigo\":5,\"mensaje\":\""+e.getMessage()+"\"}";
 		}
-		
+
 		return resultado;
 	}
 

@@ -17,18 +17,18 @@ import com.green.mx.service.ISalidaService;
 @CrossOrigin("*")
 @RequestMapping("/warehouse")
 public class SalidaController {
-	
+
 	/**
 	 * Constante de JSON
 	 */
 	private static final String JSON_PROD_CONS = "application/json;charset=UTF-8";
-	
+
 	/**
 	 * Instancia de acceso al service
 	 */
 	@Autowired
 	private ISalidaService service;
-	
+
 	/**
 	 * API para retornar una lista de Salidas
 	 * @param request - Info Request con los filtros a aplicar
@@ -38,11 +38,11 @@ public class SalidaController {
 	public Estatus<Salida> getSalidas(@RequestBody RequestGetPaginado request){
 		return service.getSalidas(request);
 	}
-	
+
 	/**
 	 * API para permitir crear, modificar, baja de Salidas
-	 * @param request - Información con los datos a guardar, con accion a realizar 
-	 * @return {@link Estatus<Salida>} - Estado de la solicitud 
+	 * @param request - Información con los datos a guardar, con accion a realizar
+	 * @return {@link Estatus<Salida>} - Estado de la solicitud
 	 */
 	@PostMapping(path = "/crudSalida",consumes = JSON_PROD_CONS,produces = JSON_PROD_CONS)
 	public Estatus<Salida> crudSalida(@RequestBody Request request){

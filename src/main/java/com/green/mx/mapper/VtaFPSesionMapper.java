@@ -22,7 +22,7 @@ public class VtaFPSesionMapper implements RowMapper<VtaFPSesion>{
 		venta.setCveFormaPag(rs.getString(7));
 		venta.setDescFormaPag(rs.getString(8));
 		venta.setMonto(rs.getBigDecimal(9));
-		
+
 		return venta;
 	}
 

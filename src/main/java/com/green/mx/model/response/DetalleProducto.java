@@ -4,27 +4,27 @@ import java.io.Serializable;
 import java.math.BigDecimal;
 
 public class DetalleProducto implements Serializable{
-	
-	
+
+
 	/**
 	 * Serial Id
 	 */
 	private static final long serialVersionUID = 19995226435130705L;
 
 	private Integer stock;
-	
+
 	private Integer minStock;
-	
+
 	private Integer maxStock;
-	
+
 	private Boolean iva;
-    
+
 	private Boolean ptv;
-    
+
     private BigDecimal precioCosto;
-    
+
     private BigDecimal precioVenta;
-    
+
     private Boolean bascula;
 
 	/**
@@ -138,10 +138,10 @@ public class DetalleProducto implements Serializable{
 	public void setBascula(Boolean bascula) {
 		this.bascula = bascula;
 	}
-    
-    
-    
-	
-	
+
+
+
+
+
 
 }

@@ -15,20 +15,20 @@ import com.green.mx.service.ICatOperacionService;
 @CrossOrigin("*")
 @RequestMapping("/warehouse")
 public class CatOperacionController {
-	
-	
+
+
 	/**
 	 * Constante de JSON
 	 */
 	private static final String JSON_PROD_CONS = "application/json;charset=UTF-8";
 
-	
+
 	/**
 	 * Instancia de acceso al service
 	 */
 	@Autowired
 	private ICatOperacionService service;
-	
+
 	/**
 	 * Que para retornar una lista operaciones
 	 * @param accion 1 todos, 2 activos, 3 inactivos

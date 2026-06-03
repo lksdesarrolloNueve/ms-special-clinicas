@@ -3,32 +3,32 @@ package com.green.mx.model.response;
 import java.io.Serializable;
 
 public class CatOperacion implements Serializable {
-	
+
 	/**
 	 * Serial Id de la clase
 	 */
 	private static final long serialVersionUID = -7835255327679219002L;
-	
+
 	/**
 	 * Id operacion
 	 */
 	private Integer operacionId;
-	
+
 	/**
 	 * Clave operacion
 	 */
 	private String clave;
-	
+
 	/**
 	 * Descripcion operacion
 	 */
 	private String descripcion;
-	
+
 	/**
 	 * Operacion suma o resta
 	 */
 	private String operacion;
-	
+
 	/**
 	 * Estatus
 	 */
@@ -103,8 +103,8 @@ public class CatOperacion implements Serializable {
 	public void setEstatus(boolean estatus) {
 		this.estatus = estatus;
 	}
-	
 
-	
-	
+
+
+
 }

@@ -13,18 +13,18 @@ import com.green.mx.service.IEntradaService;
 
 @Service
 public class ImplEntradaService implements IEntradaService{
-	
-	
+
+
 	/**
 	 * QUERY PARA OBTENER LOS ALAMCENES DEPENDIENDO DE LA ACCION
 	 */
 	private String queryGetList ="SELECT * FROM almacen.get_entradas(?,?,?,?);";
-	
+
 	/**
 	 * Query para CRUDS de Alamcenes
 	 */
 	private String queryCRUDEntrada = "SELECT * FROM almacen.crud_entrada(?,?)";
-	
+
 	/**
 	 * INSTANCIA DE ACCESO A DATOS
 	 */
@@ -38,17 +38,17 @@ public class ImplEntradaService implements IEntradaService{
 	 */
 	@Override
 	public Estatus<Entrada> getEntradas(RequestGetPaginado request) {
-		return  daoEntrada.getList(queryGetList,  
-				new Object[] {request.getFiltros(), request.getAccion(), 
-						request.getNoPagina(), request.getTamPagina()}, 
+		return  daoEntrada.getList(queryGetList,
+				new Object[] {request.getFiltros(), request.getAccion(),
+						request.getNoPagina(), request.getTamPagina()},
 				new EntradaMapper());
 	}
 
-	
+
 	/**
 	 * Metodo para permitir crear, modificar, baja de Entradas
-	 * @param request - Información con los datos a guardar, con accion a realizar 
-	 * @return {@link Estatus<Entrada>} - Estado de la solicitud 
+	 * @param request - Información con los datos a guardar, con accion a realizar
+	 * @return {@link Estatus<Entrada>} - Estado de la solicitud
 	 */
 	@Override
 	public Estatus<Entrada> crudEntrada(Request request) {

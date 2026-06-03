@@ -3,30 +3,30 @@ package com.green.mx.model.response;
 import java.io.Serializable;
 
 public class Cliente implements Serializable{
-	
+
 	/**
 	 * Serial ID
 	 */
 	private static final long serialVersionUID = -1260555267372256951L;
 
 	private Long clienteID;
-	
+
     private String cveCliente;
-    
+
     private String nombre;
-    
+
     private String aPaterno;
-    
+
     private String aMaterno;
-    
+
     private String fechaNac;
-    
+
     private String telefono;
-    
+
     private String email;
-    
+
     private String detalle;
-    
+
     private Boolean estatus;
 
 	/**
@@ -168,7 +168,7 @@ public class Cliente implements Serializable{
 	public void setEstatus(Boolean estatus) {
 		this.estatus = estatus;
 	}
-    
-    
+
+
 
 }

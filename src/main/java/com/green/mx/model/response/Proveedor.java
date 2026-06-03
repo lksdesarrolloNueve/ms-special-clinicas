@@ -3,29 +3,29 @@ package com.green.mx.model.response;
 import java.io.Serializable;
 
 public class Proveedor implements Serializable{
-	
-	
+
+
 	/**
 	 * Serial ID
 	 */
 	private static final long serialVersionUID = -2994596043736747097L;
 
 	private Integer proveedorID;
-	
+
     private String nombre;
-    
+
     private String telefono;
-    
+
     private String email;
-    
+
     private String direccion;
-    
+
     private Integer cp;
-    
+
     private String fechaAlta;
-    
+
     private Boolean estatus;
-    
+
     private String cveProveedor;
 
 	/**
@@ -153,7 +153,7 @@ public class Proveedor implements Serializable{
 	public void setCveProveedor(String cveProveedor) {
 		this.cveProveedor = cveProveedor;
 	}
-    
-    
+
+
 
 }

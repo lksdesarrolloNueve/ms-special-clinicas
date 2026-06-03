@@ -16,7 +16,7 @@ public class ImplCatFormaPagoService implements ICatFormaPagoService {
 	 * QUERY PARA OBTENER LAS CAJAS DEPENDIENDO DE LA ACCION
 	 */
 	private String queryGetList ="SELECT * FROM almacen.get_formas_pago(?);";
-	
+
 
 	/**
 	 * INSTANCIA DE ACCESO A DATOS
@@ -24,7 +24,7 @@ public class ImplCatFormaPagoService implements ICatFormaPagoService {
 	@Autowired
 	private IGestionDAO<CatFormaPago> daoFormaPago;
 
-	
+
 	/**
 	 * Que para retornar una lista de formas pago
 	 * @param accion 1 todos, 2 activos, 3 inactivos
@@ -32,11 +32,11 @@ public class ImplCatFormaPagoService implements ICatFormaPagoService {
 	 */
 	@Override
 	public Estatus<CatFormaPago> getCatFormasPago(Integer accion) {
-		return daoFormaPago.getList(queryGetList,  
+		return daoFormaPago.getList(queryGetList,
 				new Object[] { accion},
 				new CatFormaPagoMapper());
 	}
-	
-	
+
+
 
 }

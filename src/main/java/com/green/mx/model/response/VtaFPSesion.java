@@ -4,28 +4,28 @@ import java.io.Serializable;
 import java.math.BigDecimal;
 
 public class VtaFPSesion implements Serializable{
-	
+
 	/**
 	 * Serial Id de la clase
 	 */
 	private static final long serialVersionUID = 4780739045811741562L;
 
 	private Long ventaID;
-	
+
 	private String cveVenta;
-	
+
 	private String concepto;
-	
+
 	private String operacion;
-	
+
 	private String descripcion;
-	
+
 	private String fechaHora;
-	
+
 	private String cveFormaPag;
-	
+
 	private String descFormaPag;
-	
+
 	private BigDecimal monto;
 
 	/**
@@ -153,7 +153,7 @@ public class VtaFPSesion implements Serializable{
 	public void setMonto(BigDecimal monto) {
 		this.monto = monto;
 	}
-	
-	
+
+
 
 }

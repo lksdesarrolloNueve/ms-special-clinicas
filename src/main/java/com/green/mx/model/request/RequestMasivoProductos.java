@@ -3,18 +3,18 @@ package com.green.mx.model.request;
 import java.io.Serializable;
 
 public class RequestMasivoProductos implements Serializable{
-	
+
 	/**
 	 * Serial Id de la clase
 	 */
 	private static final long serialVersionUID = 4659935118619601297L;
 
 	private String[][] productos;
-	
+
 	private Integer alamcenID;
-	
+
 	private String usuarioID;
-	
+
 	private Integer accion;
 
 	/**
@@ -72,7 +72,7 @@ public class RequestMasivoProductos implements Serializable{
 	public void setAccion(Integer accion) {
 		this.accion = accion;
 	}
-	
-	
+
+
 
 }

@@ -1,5 +1,5 @@
 /**
- * 
+ *
  */
 package com.green.mx.model.response;
 
@@ -17,7 +17,7 @@ public class ReimprimirTicket implements Serializable{
 	 * Serial ID de la clase
 	 */
 	private static final long serialVersionUID = -4639744898634522791L;
-	
+
 	private String cajero;
 	private String cliente;
 	private String claveVenta;
@@ -29,7 +29,7 @@ public class ReimprimirTicket implements Serializable{
 	private String productos;
 	private String apartados;
 	private BigDecimal montoResta;
-	
+
 	/**
 	 * @return the cajero
 	 */
@@ -162,9 +162,9 @@ public class ReimprimirTicket implements Serializable{
 	public void setMontoResta(BigDecimal montoResta) {
 		this.montoResta = montoResta;
 	}
-	
-	
-	
-	
+
+
+
+
 
 }

@@ -4,12 +4,12 @@ import java.io.Serializable;
 import java.math.BigDecimal;
 
 public class Apartado implements Serializable {
-	
+
 	/**
 	 * Serial Id de la clase
 	 */
 	private static final long serialVersionUID = 4780739045811741562L;
-	
+
 	private Long idApartado;
 	private String cveApartado;
 	private String almacen;
@@ -190,10 +190,10 @@ public class Apartado implements Serializable {
 	public void setProductos(String productos) {
 		this.productos = productos;
 	}
-	
-	
-	
 
-	
-	
+
+
+
+
+
 }

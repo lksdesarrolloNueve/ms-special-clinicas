@@ -3,8 +3,8 @@ package com.green.mx.model.request;
 import java.io.Serializable;
 
 public class RequestProveedor implements Serializable{
-	
-	
+
+
 	/**
 	 * Serial ID
 	 */
@@ -14,9 +14,9 @@ public class RequestProveedor implements Serializable{
 	 * Arreglo de datos
 	 */
 	private String[][] datos;
-	
+
 	/**
-	 * Accion a realizar 
+	 * Accion a realizar
 	 */
 	private Integer accion;
 
@@ -47,7 +47,7 @@ public class RequestProveedor implements Serializable{
 	public void setAccion(Integer accion) {
 		this.accion = accion;
 	}
-	
-	
+
+
 
 }

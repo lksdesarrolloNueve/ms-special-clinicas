@@ -3,30 +3,30 @@ package com.green.mx.model.response;
 import java.io.Serializable;
 
 public class Producto implements Serializable{
-	
+
     /**
 	 * Serial Id de la clase
 	 */
 	private static final long serialVersionUID = -6120582152172873441L;
 
 	private Integer productoID;
-    
+
     private String nombre;
-    
+
     private String descripcion;
-    
+
     private String codigo;
-    
+
     private String fechaAlta;
-    
+
     private Boolean estatus;
-    
+
     private String categoria;
-    
+
     private String tipoProducto;
-    
+
     private DetalleProducto detalle;
-    
+
 
 	/**
 	 * @return the productoID
@@ -127,7 +127,7 @@ public class Producto implements Serializable{
 	public void setCategoria(String categoria) {
 		this.categoria = categoria;
 	}
-	
+
 
 	/**
 	 * @return the tipoProducto
@@ -157,7 +157,7 @@ public class Producto implements Serializable{
 		this.detalle = detalle;
 	}
 
-	
-    
+
+
 
 }

@@ -5,28 +5,28 @@ import java.io.Serializable;
 public class RequestVenta  implements Serializable{
 
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 7614368363109969594L;
-	
+
 
 	/**
 	 * Arreglo de datos
 	 */
 	private String[] venta;
-	
+
 
 	/**
 	 * Arreglo de datos
 	 */
 	private String[][] ventaDetalle;
-	
+
 
 	/**
 	 * Arreglo de datos
 	 */
 	private String[][] detallePago;
-	
+
 	/**
 	 * Accion
 	 */
@@ -89,7 +89,7 @@ public class RequestVenta  implements Serializable{
 	public void setAccion(Integer accion) {
 		this.accion = accion;
 	}
-	
 
-	
+
+
 }

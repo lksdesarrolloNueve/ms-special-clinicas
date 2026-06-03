@@ -21,19 +21,19 @@ import com.green.mx.service.IPermisosService;
 @CrossOrigin("*")
 @RequestMapping("/warehouse")
 public class PermisosController {
-	
-	
+
+
 	/**
 	 * Constante de JSON
 	 */
 	private static final String JSON_PROD_CONS = "application/json;charset=UTF-8";
-	
+
 	/**
 	 * Instancia de acceso al service
 	 */
 	@Autowired
 	private IPermisosService service;
-	
+
 	/**
 	 * API para retornar una lista de Roles
 	 * @param accion - 1. Todos los roles, 2. Rol Activos, 3. Rol inactivos
@@ -43,17 +43,17 @@ public class PermisosController {
 	public Estatus<Rol> getRoles(@PathVariable(value ="accion")Integer accion){
 		return service.getRoles(accion);
 	}
-	
+
 	/**
 	 * API para permitir crear, modificar, baja de roles
-	 * @param request - Información con los datos a guardar, con accion a realizar 
-	 * @return {@link Estatus<Categoria>} - Estado de la solicitud 
+	 * @param request - Información con los datos a guardar, con accion a realizar
+	 * @return {@link Estatus<Categoria>} - Estado de la solicitud
 	 */
 	@PostMapping(path = "/crudRol",consumes = JSON_PROD_CONS,produces = JSON_PROD_CONS)
 	public Estatus<Rol> crudRol(@RequestBody Request request){
 		return service.crudRol(request);
 	}
-	
+
 	/**
 	 * API para retornar una lista de Menus
 	 * @param accion - 1. Todos los Menus, 2. Menus Activos, 3. Menus inactivos
@@ -63,27 +63,27 @@ public class PermisosController {
 	public Estatus<Menu> getMenus(@PathVariable(value ="rolID")String rolID){
 		return service.getMenus(rolID);
 	}
-	
+
 	/**
 	 * API para permitir registrar permisos por rol
 	 * @param request - Información con los datos a guardar
-	 * @return {@link Estatus<Menu>} - Estado de la solicitud 
+	 * @return {@link Estatus<Menu>} - Estado de la solicitud
 	 */
 	@PostMapping(path = "/crudPermisos",consumes = JSON_PROD_CONS,produces = JSON_PROD_CONS)
 	public Estatus<Menu> crudPermisos(@RequestBody RequestPermisos request){
 		return service.crudPermisos(request);
 	}
-	
+
 	/**
 	 * API para permitir crear, modificar, baja de usuarios
-	 * @param request - Información con los datos a guardar, con accion a realizar 
-	 * @return {@link Estatus<Usuario>} - Estado de la solicitud 
+	 * @param request - Información con los datos a guardar, con accion a realizar
+	 * @return {@link Estatus<Usuario>} - Estado de la solicitud
 	 */
 	@PostMapping(path = "/crudPermisosUsuario",consumes = JSON_PROD_CONS,produces = JSON_PROD_CONS)
 	public Estatus<Menu> crudPermisosUsuario(@RequestBody RequestUsuario request){
 		return service.crudPermisosUsuario(request);
 	}
-	
+
 	/**
 	 * API para obtener los permisos por Usuario
 	 * @param usuarioID - Usuario a Filtrar / Usuario logueado

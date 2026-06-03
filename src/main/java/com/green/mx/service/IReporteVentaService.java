@@ -1,5 +1,5 @@
 /**
- * 
+ *
  */
 package com.green.mx.service;
 
@@ -21,23 +21,23 @@ public interface IReporteVentaService {
 	 * @return {@link String} - JSON String
 	 */
 	String reporteVentas(String[] datos ,Integer accion);
-	
+
 	/**
 	 * Que retorna la lista de totales por filtro
 	 * @param request - Datos a filtrar
 	 * @return {@link Estatus<TotalOperacion>} - Info con los datos
 	 */
 	Estatus<TotalOperacion> getTotalesOperacion(Request request);
-	
-	
+
+
 	/**
 	 * Que retorna la lista de entradas para reporte de graficas
 	 * @param request - Datos a filtrar
 	 * @return {@link Estatus<ReporteEntrada>} - Info con los datos
 	 */
 	Estatus<ReporteEntrada> getReporteEntradas(Request request);
-	
-	
+
+
 	/**
 	 * Que retorna la lista de salidas para reporte de graficas
 	 * @param request - Datos a filtrar

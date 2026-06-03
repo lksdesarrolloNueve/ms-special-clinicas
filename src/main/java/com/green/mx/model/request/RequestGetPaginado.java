@@ -3,18 +3,18 @@ package com.green.mx.model.request;
 import java.io.Serializable;
 
 public class RequestGetPaginado implements Serializable{
-	
+
 	/**
 	 * Serial Id de la clase
 	 */
 	private static final long serialVersionUID = 2278774856049502846L;
 
 	private String[] filtros;
-	
+
 	private Integer accion;
 
 	private Integer noPagina;
-	
+
 	private Integer tamPagina;
 
 	/**
@@ -72,8 +72,8 @@ public class RequestGetPaginado implements Serializable{
 	public void setTamPagina(Integer tamPagina) {
 		this.tamPagina = tamPagina;
 	}
-	
-	
-	
+
+
+
 
 }

@@ -8,22 +8,22 @@ public class CatTipoProducto implements Serializable{
 	 * Serial Id de la clase
 	 */
 	private static final long serialVersionUID = -7835255327679219002L;
-	
+
 	/**
 	 * Id tipo producto
 	 */
 	private Integer idTipoProducto;
-	
+
 	/**
 	 * Clave tipo producto
 	 */
 	private String cveTipoProducto;
-	
+
 	/**
 	 * Descripcion
 	 */
 	private String descripcion;
-	
+
 	/**
 	 * Estatus
 	 */
@@ -84,10 +84,10 @@ public class CatTipoProducto implements Serializable{
 	public void setEstatus(Boolean estatus) {
 		this.estatus = estatus;
 	}
-	
-	
 
-	
-	
-	
+
+
+
+
+
 }

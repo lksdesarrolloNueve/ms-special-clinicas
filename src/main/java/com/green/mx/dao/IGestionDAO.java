@@ -14,7 +14,7 @@ import com.green.mx.model.Estatus;
  *
  */
 public interface IGestionDAO<T> {
-	
+
 	/**
 	 * Metodo que retornara una consulta desde una funcion
 	 * @param query - Query a consultar
@@ -22,8 +22,8 @@ public interface IGestionDAO<T> {
 	 * @return {@link Estatus<T>} Info generica a retormnar
 	 */
 	Estatus<T> getList(String query, Object[] params, RowMapper<T> rowMapp);
-	
-	
+
+
 	/**
 	 * Metodo que recibe un crud
 	 * @param query - Crud a ejecutar
@@ -31,8 +31,8 @@ public interface IGestionDAO<T> {
 	 * @return {@link Estatus<T>} Info generica a retormnar
 	 */
 	Estatus<T> crud(String query, Object[] params);
-	
-	
+
+
 	/**
 	 * Metodo que retornara una consulta desde una funcion y retorna un JSON en text
 	 * @param query - Query a consultar

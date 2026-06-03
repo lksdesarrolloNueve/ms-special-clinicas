@@ -23,7 +23,7 @@ public class ImplCajaService implements ICajaService {
 	 * QUERY PARA OBTENER LAS CAJAS DEPENDIENDO DE LA ACCION
 	 */
 	private String queryGetList ="SELECT * FROM almacen.get_cajas(?,?);";
-	
+
 	/**
 	 * Query para CRUDS de Cajas
 	 */
@@ -33,50 +33,50 @@ public class ImplCajaService implements ICajaService {
 	 * QUERY PARA OBTENER LOS ALAMCENES DEPENDIENDO DE LA ACCION
 	 */
 	private String queryGetCajas ="SELECT * FROM almacen.get_cajas_disponibles_sesion(?,?);";
-	
-	
+
+
 	/**
 	 * Query tipo CRUD para Registrar Sesion de Caja
 	 */
 	private String queryCRUDSesionCaja ="SELECT * FROM almacen.crud_sesion_caja(?,?);";
-	
+
 	/**
 	 * QUERY PARA OBTENER LOS ALAMCENES DEPENDIENDO DE LA ACCION
 	 */
 	private String queryGetSesionesCajas ="SELECT * FROM almacen.get_sesiones_cajas(?,?);";
-	
+
 	/**
 	 * QUERY PARA OBTENER LOS SALDOS DE LOS MOVIMIENTOS CAJA
 	 */
 	private String queryGetMovSesion ="SELECT * FROM almacen.get_saldos_cajas(?,?);";
 
 
-	
+
 	/**
 	 * INSTANCIA DE ACCESO A DATOS
 	 */
 	@Autowired
 	private IGestionDAO<Caja> daoCaja;
-	
+
 	/**
 	 * INSTANCIA DE ACCESO A DATOS
 	 */
 	@Autowired
 	private IGestionDAO<String> daoCajasS;
-	
+
 	/**
 	 * INSTANCIA DE ACCESO A DATOS
 	 */
 	@Autowired
 	private IGestionDAO<SesionCaja> daoSesionCajas;
-	
-	
+
+
 	/**
 	 * INSTANCIA DE ACCESO A DATOS
 	 */
 	@Autowired
 	private IGestionDAO<MovSesionCaja> daoMovSesion;
-	
+
 	/**
 	 * Metodo para retornar una lista de Cajas
 	 * @param request - Info Request con los filtros a aplicar
@@ -84,16 +84,16 @@ public class ImplCajaService implements ICajaService {
 	 */
 	@Override
 	public Estatus<Caja> getCajas(Request request) {
-		return daoCaja.getList(queryGetList,  
+		return daoCaja.getList(queryGetList,
 				new Object[] {request.getDatos(), request.getAccion()},
 				new CajaMapper());
 	}
-	
+
 
 	/**
 	 * Metodo para permitir crear, modificar, baja de Cajas
-	 * @param request - Información con los datos a guardar, con accion a realizar 
-	 * @return {@link Estatus<Salida>} - Estado de la solicitud 
+	 * @param request - Información con los datos a guardar, con accion a realizar
+	 * @return {@link Estatus<Salida>} - Estado de la solicitud
 	 */
 	@Override
 	public Estatus<Caja> crudCaja(Request request) {
@@ -131,12 +131,12 @@ public class ImplCajaService implements ICajaService {
 	 */
 	@Override
 	public Estatus<SesionCaja> getSesionesCajas(Request request) {
-		return daoSesionCajas.getList(queryGetSesionesCajas, 
+		return daoSesionCajas.getList(queryGetSesionesCajas,
 				new Object[] {request.getDatos(),request.getAccion()},
 				new SesionCajaMapper());
 	}
-	
-	
+
+
 	/**
 	 * Metodo para obtener una lista de saldos de la caja
 	 * @param request - Datos a filtrar
@@ -144,11 +144,11 @@ public class ImplCajaService implements ICajaService {
 	 */
 	@Override
 	public Estatus<MovSesionCaja> getSaldoMovCaja(Request request) {
-		return daoMovSesion.getList(queryGetMovSesion, 
+		return daoMovSesion.getList(queryGetMovSesion,
 				new Object[] {request.getDatos(),request.getAccion()},
 				new MovSesionCajaMapper());
 	}
-	
-	
+
+
 }
 

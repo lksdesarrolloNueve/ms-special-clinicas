@@ -1,5 +1,5 @@
 /**
- * 
+ *
  */
 package com.green.mx.mapper;
 
@@ -32,7 +32,7 @@ public class ReimprimirTicketMapper implements RowMapper<ReimprimirTicket>{
 		reimprimir.setProductos(rs.getString(9));
 		reimprimir.setApartados(rs.getString(10));
 		reimprimir.setMontoResta(rs.getBigDecimal(11));
-		
+
 		return reimprimir;
 	}
 

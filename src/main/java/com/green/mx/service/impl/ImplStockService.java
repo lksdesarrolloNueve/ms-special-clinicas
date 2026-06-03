@@ -12,13 +12,13 @@ import com.green.mx.service.IStockService;
 
 @Service
 public class ImplStockService implements IStockService{
-	
+
 	/**
 	 * QUERY PARA OBTENER LOS ALAMCENES DEPENDIENDO DE LA ACCION
 	 */
 	private String queryGetList ="SELECT * FROM almacen.get_stock_productos(?,?);";
 
-	
+
 	/**
 	 * INSTANCIA DE ACCESO A DATOS
 	 */
@@ -32,7 +32,7 @@ public class ImplStockService implements IStockService{
 	 */
 	@Override
 	public Estatus<Stock> getStock(Request request) {
-		return daoStock.getList(queryGetList, 
+		return daoStock.getList(queryGetList,
 				new Object[] {request.getDatos(),request.getAccion()},
 				new StockMapper());
 	}

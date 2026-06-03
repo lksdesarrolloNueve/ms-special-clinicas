@@ -16,52 +16,52 @@ import com.green.mx.service.IPermisosService;
 
 @Service
 public class ImplPermisosService implements IPermisosService{
-	
+
 	/**
 	 * QUERY PARA OBTENER LOS Roles DEPENDIENDO DE LA ACCION
 	 */
 	private String queryGetList ="SELECT * FROM almacen.get_roles(?);";
-	
+
 	/**
 	 * Query para CRUDS de Roles
 	 */
 	private String queryCRUDRol = "SELECT * FROM almacen.crud_rol(?,?)";
-	
+
 	/**
 	 * QUERY PARA OBTENER LOS Roles DEPENDIENDO DE LA ACCION
 	 */
 	private String queryGetListMenus ="SELECT * FROM almacen.get_menus(?);";
-	
+
 	/**
 	 * Query para registrar los permisos de usuario
 	 */
 	private String queryCRUDPermisos = "SELECT * FROM almacen.crud_permisos(?,?)";
-	
-	
+
+
 	/**
 	 * Query para CRUDS de Alamcenes
 	 */
 	private String queryCRUDPermisosUsuario = "SELECT * FROM almacen.crud_permisos_usuario(?,?,?)";
-	
+
 	/**
 	 * Query para obtener los permisos de usuario
 	 */
 	private String queryGetPermisosUsuario = "SELECT * FROM almacen.get_permisos_usuario(?)";
-	
+
 	/**
 	 * INSTANCIA DE ACCESO A DATOS a ROLES
 	 */
 	@Autowired
 	private IGestionDAO<Rol> daoRol;
-	
-	
+
+
 	/**
 	 * INSTANCIA DE ACCESO A DATOS A MENUS
 	 */
 	@Autowired
 	private IGestionDAO<Menu> daoMenu;
-	
-	
+
+
 	/**
 	 * Metodo para retornar una lista de Roles
 	 * @param accion - 1. Todos los Categoria, 2. Rol Activos, 3. Rol inactivos
@@ -74,8 +74,8 @@ public class ImplPermisosService implements IPermisosService{
 
 	/**
 	 * Metodo para permitir crear, modificar, baja de Roles
-	 * @param request - Información con los datos a guardar, con accion a realizar 
-	 * @return {@link Estatus<Rol>} - Estado de la solicitud 
+	 * @param request - Información con los datos a guardar, con accion a realizar
+	 * @return {@link Estatus<Rol>} - Estado de la solicitud
 	 */
 	@Override
 	public Estatus<Rol> crudRol(Request request) {
@@ -95,7 +95,7 @@ public class ImplPermisosService implements IPermisosService{
 	/**
 	 * Metodo para permitir registrar permisos por rol
 	 * @param request - Información con los datos a guardar
-	 * @return {@link Estatus<Menu>} - Estado de la solicitud 
+	 * @return {@link Estatus<Menu>} - Estado de la solicitud
 	 */
 	@Override
 	public Estatus<Menu> crudPermisos(RequestPermisos request) {
@@ -104,8 +104,8 @@ public class ImplPermisosService implements IPermisosService{
 
 	/**
 	 * Metodo para permitir crear, modificar, baja de usuarios
-	 * @param request - Información con los datos a guardar, con accion a realizar 
-	 * @return {@link Estatus<Usuario>} - Estado de la solicitud 
+	 * @param request - Información con los datos a guardar, con accion a realizar
+	 * @return {@link Estatus<Usuario>} - Estado de la solicitud
 	 */
 	@Override
 	public Estatus<Menu> crudPermisosUsuario(RequestUsuario request) {

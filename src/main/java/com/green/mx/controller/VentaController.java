@@ -22,31 +22,31 @@ import com.green.mx.service.IVentaService;
 @CrossOrigin("*")
 @RequestMapping("/warehouse")
 public class VentaController {
-	
+
 	/**
 	 * Constante de JSON
 	 */
 	private static final String JSON_PROD_CONS = "application/json;charset=UTF-8";
-	
+
 	/**
 	 * Instancia de acceso al service
 	 */
 	@Autowired
 	private IVentaService service;
 
-	
+
 	/**
 	 * API para permitir crear, modificar, baja de Entradas
-	 * @param request - Información con los datos a guardar, con accion a realizar 
-	 * @return {@link Estatus<Entrada>} - Estado de la solicitud 
+	 * @param request - Información con los datos a guardar, con accion a realizar
+	 * @return {@link Estatus<Entrada>} - Estado de la solicitud
 	 */
 	@PostMapping(path = "/crudVenta",consumes = JSON_PROD_CONS,produces = JSON_PROD_CONS)
 	public String  crudVenta(@RequestBody RequestVenta request){
 		return service.crudVenta(request);
 	}
-	
-	
-	
+
+
+
 	/**
 	 * API para listar las ventas/movimientos por sesion
 	 * @param reqBusqueda - Datos a filtrar
@@ -56,7 +56,7 @@ public class VentaController {
 	public Estatus<VtaFPSesion> getVentasXFPXSesion(@RequestBody Request request){
 		return service.getVentasXFPXSesion(request);
 	}
-	
+
 
 	/**
 	 * API para listar las ventas detalle por clave
@@ -67,7 +67,7 @@ public class VentaController {
 	public Estatus<Venta> getVentaByCve(@RequestBody Request request){
 		return service.getVentaByCve(request);
 	}
-	
+
 	/**
 	 * API para listar las ventas por dia
 	 * @param reqBusqueda - Datos a filtrar
@@ -77,5 +77,5 @@ public class VentaController {
 	public Estatus<ReimprimirTicket> getReimprimirTicket(@RequestBody Request request){
 		return service.getReimpresionTicket(request);
 	}
-	
+
 }

@@ -1,13 +1,13 @@
 package com.green.mx.model;
 
 public class Request {
-	
-	
+
+
 	/**
 	 * Json para CRUD
 	 */
 	private Object datos;
-	
+
 	/**
 	 * Accion a realizar 1.- Inserta, 2. Actualiza
 	 */

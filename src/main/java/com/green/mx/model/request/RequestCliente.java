@@ -3,16 +3,16 @@ package com.green.mx.model.request;
 import java.io.Serializable;
 
 public class RequestCliente implements Serializable{
-	
+
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 7614368363109969594L;
 
 	private String[] datos;
-	
+
 	private String[] detalle;
-	
+
 	private Integer accion;
 
 	/**
@@ -56,7 +56,7 @@ public class RequestCliente implements Serializable{
 	public void setAccion(Integer accion) {
 		this.accion = accion;
 	}
-	
-	
+
+
 
 }

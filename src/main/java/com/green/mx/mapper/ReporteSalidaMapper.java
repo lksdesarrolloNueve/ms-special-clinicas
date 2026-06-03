@@ -5,7 +5,6 @@ import java.sql.SQLException;
 
 import org.springframework.jdbc.core.RowMapper;
 
-
 import com.green.mx.model.response.ReporteSalida;
 
 public class ReporteSalidaMapper implements RowMapper<ReporteSalida> {

@@ -15,19 +15,19 @@ import com.green.mx.service.ICatTipoProductoService;
 @CrossOrigin("*")
 @RequestMapping("/warehouse")
 public class CatTipoProductoController {
-	
+
 	/**
 	 * Constante de JSON
 	 */
 	private static final String JSON_PROD_CONS = "application/json;charset=UTF-8";
-	
+
 	/**
 	 * Instancia de acceso al service
 	 */
 	@Autowired
 	private ICatTipoProductoService service;
-	
-	
+
+
 	/**
 	 * API que que retorna una lista de cat. tipo producto
 	 * @param accion - 1. Todos , 2. Activos, 3.inactivos

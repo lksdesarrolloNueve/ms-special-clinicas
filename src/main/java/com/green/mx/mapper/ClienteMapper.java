@@ -12,7 +12,7 @@ public class ClienteMapper implements RowMapper<Cliente>{
 	@Override
 	public Cliente mapRow(ResultSet rs, int rowNum) throws SQLException {
 		var cliente=new Cliente();
-		
+
 		cliente.setClienteID(rs.getLong(1));
 		cliente.setCveCliente(rs.getString(2));
 		cliente.setNombre(rs.getString(3));
@@ -23,7 +23,7 @@ public class ClienteMapper implements RowMapper<Cliente>{
 		cliente.setEmail(rs.getString(8));
 		cliente.setDetalle(rs.getString(9));
 		cliente.setEstatus(rs.getBoolean(10));
-		
+
 		return cliente;
 	}
 

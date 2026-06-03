@@ -3,22 +3,22 @@ package com.green.mx.model.response;
 import java.io.Serializable;
 
 public class Menu implements Serializable{
-	
+
 	/**
-	 * Serial Id 
+	 * Serial Id
 	 */
 	private static final long serialVersionUID = 1981814499895756510L;
 
 	private Integer menuID;
-	
+
     private String titulo;
-    
+
     private String descripcion;
-    
+
     private String icon;
-    
+
     private String pathurl;
-    
+
     private Boolean estatus;
 
 	/**
@@ -104,7 +104,7 @@ public class Menu implements Serializable{
 	public void setEstatus(Boolean estatus) {
 		this.estatus = estatus;
 	}
-    
-    
+
+
 
 }

@@ -12,7 +12,7 @@ public class ReporteEntradaMapper implements RowMapper<ReporteEntrada>{
 	@Override
 	public ReporteEntrada mapRow(ResultSet rs, int rowNum) throws SQLException {
 		var entrada = new ReporteEntrada();
-		
+
 		entrada.setProducto(rs.getString(1));
 		entrada.setCantidad(rs.getLong(2));
 		entrada.setStock(rs.getLong(3));
@@ -20,7 +20,7 @@ public class ReporteEntradaMapper implements RowMapper<ReporteEntrada>{
 		entrada.setPrecioVenta(rs.getBigDecimal(5));
 		entrada.setUsuario(rs.getString(6));
 		entrada.setEstablecimiento(rs.getString(7));
-		
+
 		return entrada;
 	}
 

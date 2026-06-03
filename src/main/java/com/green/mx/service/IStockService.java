@@ -5,7 +5,7 @@ import com.green.mx.model.request.Request;
 import com.green.mx.model.response.Stock;
 
 public interface IStockService {
-	
+
 	/**
 	 * Que para obtener el stock de los productos en Almacenes
 	 * @param request - Datos a filtrar

@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.green.mx.model.Estatus;
 import com.green.mx.model.response.CatFormaPago;
-
 import com.green.mx.service.ICatFormaPagoService;
 
 @RestController
@@ -22,13 +21,13 @@ public class CatFormaPagoController {
 	 */
 	private static final String JSON_PROD_CONS = "application/json;charset=UTF-8";
 
-	
+
 	/**
 	 * Instancia de acceso al service
 	 */
 	@Autowired
 	private ICatFormaPagoService service;
-	
+
 	/**
 	 * Que para retornar una lista de formas pago
 	 * @param accion 1 todos, 2 activos, 3 inactivos
@@ -38,7 +37,7 @@ public class CatFormaPagoController {
 	public Estatus<CatFormaPago> getFormaPago(@PathVariable(value ="accion")Integer accion){
 		return service.getCatFormasPago(accion);
 	}
-	
-	
-	
+
+
+
 }

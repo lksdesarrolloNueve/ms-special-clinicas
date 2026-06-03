@@ -89,8 +89,8 @@ public class ReporteSalida implements Serializable{
 	public void setEstablecimiento(String establecimiento) {
 		this.establecimiento = establecimiento;
 	}
-	
-	
-	
+
+
+
 
 }

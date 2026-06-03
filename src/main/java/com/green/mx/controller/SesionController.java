@@ -31,11 +31,11 @@ public class SesionController {
 
 	@Value("${varKeycloak.client_id}")
 	private String clienteID;
-	
-	
+
+
 	@Value("${varKeycloak.refresh_token}")
 	private String granTYPERefreshToken;
-	
+
 
 
 	/**
@@ -65,8 +65,8 @@ public class SesionController {
 
 		return responses.getBody();
 	}
-	
-	
+
+
 	@PostMapping(path = "/refreshToken/{token}", produces = JSON_PROD_CONS)
 	public String refreshToken(@PathVariable(value = "token") String token) {
 		RestTemplate restTemplate = new RestTemplate();

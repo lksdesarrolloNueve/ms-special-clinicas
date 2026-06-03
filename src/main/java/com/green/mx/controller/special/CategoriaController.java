@@ -20,7 +20,7 @@ import com.green.mx.service.IDinamicoService;
 @CrossOrigin("*")
 @RequestMapping("/special")
 public class CategoriaController {
-    
+
 	/**
 	 * Constante JSON
 	 */
@@ -32,11 +32,11 @@ public class CategoriaController {
 	// Instancia service dinamico
 	@Autowired
 	private IDinamicoService service;
-	
-	
+
+
 	/**
 	 * API que permite crear, modificar, baja de categorias
-	 * @param request - Información con los datos a guardar, con accion a realizar 
+	 * @param request - Información con los datos a guardar, con accion a realizar
 	 * @return {@link String} - Informacion general de la petición
 	 */
 	@PostMapping(path = "/categorias",consumes = JSON_PROD_CONS,produces = JSON_PROD_CONS)
@@ -46,5 +46,5 @@ public class CategoriaController {
 	    request.setTenantID(empresaUuid);
 		return service.execQueryDinamicoTenant(request, QUERY_CRUD_CATEGORIAS);
 	}
-    
+
 }

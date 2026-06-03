@@ -9,22 +9,22 @@ public class MovSesionCaja implements Serializable {
 	 * Serial Id de la clase
 	 */
 	private static final long serialVersionUID = -7835255327679219002L;
-	
+
 	/**
 	 * id
 	 */
 	private Integer idFPago;
-	
+
 	/**
 	 * Cve forma pago
 	 */
 	private String cveFPago;
-	
+
 	/**
 	 * Descripcion forma pago
 	 */
 	private String descripcion;
-	
+
 	/**
 	 * Saldo
 	 */
@@ -85,7 +85,7 @@ public class MovSesionCaja implements Serializable {
 	public void setMonto(BigDecimal monto) {
 		this.monto = monto;
 	}
-	
-	
-	
+
+
+
 }

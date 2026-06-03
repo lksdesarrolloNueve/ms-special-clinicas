@@ -12,17 +12,17 @@ import com.green.mx.service.ICategoriaService;
 
 @Service
 public class ImplCategoriaService implements ICategoriaService{
-	
+
 	/**
 	 * QUERY PARA OBTENER LOS Categorias DEPENDIENDO DE LA ACCION
 	 */
 	private String queryGetList ="SELECT * FROM almacen.get_categorias(?);";
-	
+
 	/**
 	 * Query para CRUDS de Categorias
 	 */
 	private String queryCRUDCategoria = "SELECT * FROM almacen.crud_categoria(?,?)";
-	
+
 	/**
 	 * INSTANCIA DE ACCESO A DATOS
 	 */
@@ -41,8 +41,8 @@ public class ImplCategoriaService implements ICategoriaService{
 
 	/**
 	 * Metodo para permitir crear, modificar, baja de Categorias
-	 * @param request - Información con los datos a guardar, con accion a realizar 
-	 * @return {@link Estatus<Categoria>} - Estado de la solicitud 
+	 * @param request - Información con los datos a guardar, con accion a realizar
+	 * @return {@link Estatus<Categoria>} - Estado de la solicitud
 	 */
 	@Override
 	public Estatus<Categoria> crudCategoria(Request request) {

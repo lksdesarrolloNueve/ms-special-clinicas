@@ -12,12 +12,12 @@ import com.green.mx.service.ICatTipoProductoService;
 @Service
 public class ImplCatTipoProductoService implements ICatTipoProductoService {
 
-	
+
 	/**
 	 * QUERY PARA OBTENER LOS ALAMCENES DEPENDIENDO DE LA ACCION
 	 */
 	private String queryGetList ="SELECT * FROM almacen.get_cat_tipo_producto(?);";
-	
+
 
 	/**
 	 * INSTANCIA DE ACCESO A DATOS
@@ -32,9 +32,9 @@ public class ImplCatTipoProductoService implements ICatTipoProductoService {
 	 */
 	@Override
 	public Estatus<CatTipoProducto> getCatTipoProducto(Integer accion) {
-		
+
 		return daoCatTP.getList(queryGetList, new Object[] {accion} ,new CatTipoProductoMapper());
-	
+
 	}
-	
+
 }

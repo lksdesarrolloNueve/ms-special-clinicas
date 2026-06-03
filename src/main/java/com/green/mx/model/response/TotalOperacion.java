@@ -4,16 +4,16 @@ import java.io.Serializable;
 import java.math.BigDecimal;
 
 public class TotalOperacion implements Serializable{
-	
+
 	/**
 	 * Sereial Id de la clase
 	 */
 	private static final long serialVersionUID = -7286959023144812762L;
 
 	private String cveOperacion;
-	
+
 	private String descripcion;
-	
+
 	private BigDecimal total;
 
 	/**
@@ -57,7 +57,7 @@ public class TotalOperacion implements Serializable{
 	public void setTotal(BigDecimal total) {
 		this.total = total;
 	}
-	
-	
+
+
 
 }

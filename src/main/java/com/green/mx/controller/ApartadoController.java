@@ -17,19 +17,19 @@ import com.green.mx.service.IApartadoService;
 @CrossOrigin("*")
 @RequestMapping("/warehouse")
 public class ApartadoController {
-	
+
 	/**
 	 * Constante de JSON
 	 */
 	private static final String JSON_PROD_CONS = "application/json;charset=UTF-8";
-	
-	
+
+
 	/**
 	 * Instancia de acceso al service
 	 */
 	@Autowired
 	private IApartadoService service;
-	
+
 
 	/**
 	 * API para listar las ventas/movimientos por sesion
@@ -40,6 +40,6 @@ public class ApartadoController {
 	public Estatus<Apartado> getVentasXFPXSesion(@RequestBody Request request){
 		return service.getApartados(request);
 	}
-	
+
 
 }

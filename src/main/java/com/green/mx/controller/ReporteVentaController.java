@@ -1,5 +1,5 @@
 /**
- * 
+ *
  */
 package com.green.mx.controller;
 
@@ -29,25 +29,25 @@ public class ReporteVentaController {
 	 * Constante de JSON
 	 */
 	private static final String JSON_PROD_CONS = "application/json;charset=UTF-8";
-	
+
 
 	/**
 	 * Instancia de acceso al service
 	 */
 	@Autowired
 	private IReporteVentaService service;
-	
+
 	/**
 	 * API para generar reporte de ventas
-	 * @param request - Información con los datos a procesar, con accion a realizar 
-	 * @return {@link String} - Respuesta de la solicitud 
+	 * @param request - Información con los datos a procesar, con accion a realizar
+	 * @return {@link String} - Respuesta de la solicitud
 	 */
 	@PostMapping(path = "/getReporteVenta",consumes = JSON_PROD_CONS,produces = JSON_PROD_CONS)
 	public String getReporteVenta(@RequestBody Request request){
 		return service.reporteVentas(request.getDatos(), request.getAccion());
 	}
-	
-	
+
+
 	/**
 	 * API que retorna la lista de totales por filtro
 	 * @param request - Datos a filtrar
@@ -57,7 +57,7 @@ public class ReporteVentaController {
 	public Estatus<TotalOperacion> getTotalesOperacion(@RequestBody Request request){
 		return service.getTotalesOperacion(request);
 	}
-	
+
 	/**
 	 * Metodo retorna la lista de entradas para reporte de graficas
 	 * @param request - Datos a filtrar
@@ -67,7 +67,7 @@ public class ReporteVentaController {
 	public Estatus<ReporteEntrada> getReporteEntradas(@RequestBody Request request){
 		return service.getReporteEntradas(request);
 	}
-	
+
 	/**
 	 * Metodo retorna la lista de salidas para reporte de graficas
 	 * @param request - Datos a filtrar

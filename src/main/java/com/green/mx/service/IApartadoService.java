@@ -6,7 +6,7 @@ import com.green.mx.model.response.Apartado;
 
 
 public interface IApartadoService {
-	
+
 	/**
 	 * Que para listar los apartados
 	 * @param resquest - Datos a filtrar

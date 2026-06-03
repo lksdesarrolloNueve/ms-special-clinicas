@@ -8,14 +8,14 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.green.mx.service.IDinamicoService;
 import com.green.mx.model.Request;
+import com.green.mx.service.IDinamicoService;
 
 @RestController
 @CrossOrigin("*")
 @RequestMapping("/servicios")
 public class ServiciosController {
-	
+
 	/**
 	 * Constante JSON
 	 */
@@ -28,9 +28,9 @@ public class ServiciosController {
 	// Instancia service dinamico
 	@Autowired
 	private IDinamicoService service;
-	
-	
-	
+
+
+
 	@PostMapping(path = "/servicios", consumes = JSON_PROD_CONS, produces = JSON_PROD_CONS)
 	public String crudProspectos(@RequestBody Request request) {
 		return service.execQueryDinamico(request, queryCRUDServicios);

@@ -4,37 +4,37 @@ import java.io.Serializable;
 import java.math.BigDecimal;
 
 public class Caja implements Serializable {
-	
+
 	/**
 	 * Serial Id de la clase
 	 */
 	private static final long serialVersionUID = -7835255327679219002L;
-	
+
 	/**
 	 * Id de la caja
 	 */
 	private Integer cajaId;
-	
+
 	/**
 	 * Clave de la caja
 	 */
 	private String cveCaja;
-	
+
 	/**
 	 * Descripcion de la caja
 	 */
 	private String descripcion;
-	
+
 	/**
 	 * JSON objeto almacen
 	 */
 	private String almacen;
-	
+
 	/**
 	 * Saldo cierre caja
 	 */
 	private BigDecimal saldoCierre;
-	
+
 	/**
 	 * Estatus caja
 	 */
@@ -123,6 +123,6 @@ public class Caja implements Serializable {
 	public void setEstatus(boolean estatus) {
 		this.estatus = estatus;
 	}
-	
+
 
 }

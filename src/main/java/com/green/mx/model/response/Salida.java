@@ -3,24 +3,24 @@ package com.green.mx.model.response;
 import java.io.Serializable;
 
 public class Salida implements Serializable{
-	
+
 	/**
 	 * Serial Id de la clase
 	 */
 	private static final long serialVersionUID = 196006494554258226L;
 
 	private Long salidaID;
-	
+
 	private String producto;
-	
+
 	private Integer cantidad;
-	
+
 	private String almacen;
-	
+
 	private String usuario;
-	
+
 	private String fecha;
-	
+
 	private Long totalRecords;
 
 	/**
@@ -120,7 +120,7 @@ public class Salida implements Serializable{
 	public void setTotalRecords(Long totalRecords) {
 		this.totalRecords = totalRecords;
 	}
-	
-	
+
+
 
 }

@@ -1,5 +1,5 @@
 /**
- * 
+ *
  */
 package com.green.mx.service.impl;
 
@@ -28,49 +28,49 @@ public class ImplReporteVentaService implements IReporteVentaService{
 	 * QUERY PARA OBTENER LAS VENTAS REALIZADAS
 	 */
 	private String queryReportVenta ="SELECT * FROM almacen.reporte_ventas(?,?);";
-	
+
 	/**
 	 * Query para reporte de entrdas
 	 */
 	private String queryReporteEntradas = "SELECT * FROM almacen.get_reportes_entradas(?,?);";
-	
-	
+
+
 	/**
 	 * Query para reporte de salidas
 	 */
 	private String queryReporteSalidas = "SELECT * FROM almacen.get_reportes_salidas(?,?);";
-	
+
 	/**
 	 * INSTANCIA DE ACCESO A DATOS
 	 */
 	@Autowired
 	private IGestionDAO<String> dao;
-	
+
 	/**
 	 * Query para obtener los totales por operaciones
 	 */
 	private String queryGetTotales = "SELECT * FROM almacen.get_reportes_totales_operaciones(?,?);";
-	
+
 	/**
 	 * Instancia de acceso a datos para totales
 	 */
 	@Autowired
 	private IGestionDAO<TotalOperacion> daoTotales;
-	
-	
+
+
 	/**
 	 * Instancia de acceso a datos entrdas
 	 */
 	@Autowired
 	private IGestionDAO<ReporteEntrada> daoReporteEntrada;
-	
-	
+
+
 	/**
 	 * Instancia de acceso a datos entrdas
 	 */
 	@Autowired
 	private IGestionDAO<ReporteSalida> daoReporteSalida;
-	
+
 	/**
 	 * Metodo para obtener el reporte de ventas diarias, semanale,mensuales
 	  * @param datos -Infomacion para filtrar el reporte de ventas

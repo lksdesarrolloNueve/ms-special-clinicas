@@ -3,7 +3,7 @@ package com.green.mx.model.response;
 import java.io.Serializable;
 
 public class Almacen implements Serializable{
-	
+
 	/**
 	 * Serial Id de la clase
 	 */
@@ -13,22 +13,22 @@ public class Almacen implements Serializable{
 	 * Id del alamcaen
 	 */
 	private Integer almacenID;
-	
+
 	/**
 	 * Nombre del Alamcen
 	 */
 	private String nombre;
-	
+
 	/**
 	 * Descripcion del alamcen
 	 */
 	private String descripcion;
-	
+
 	/**
 	 * FEcha de alta
 	 */
 	private String fechaAlta;
-	
+
 	/**
 	 * Estatus del almacen
 	 */
@@ -103,8 +103,8 @@ public class Almacen implements Serializable{
 	public void setEstatus(Boolean estatus) {
 		this.estatus = estatus;
 	}
-	
-	
-	
+
+
+
 
 }

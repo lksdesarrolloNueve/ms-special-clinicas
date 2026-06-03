@@ -12,27 +12,27 @@ import com.green.mx.service.IClienteService;
 
 @Service
 public class ImplClienteService implements IClienteService{
-	
+
 	/**
 	 * QUERY PARA OBTENER LOS CLIENTES DEPENDIENDO DE LA ACCION
 	 */
 	private String queryGetList ="SELECT * FROM almacen.get_clientes(?);";
-	
+
 	/**
 	 * Query para CRUDS de Clientes
 	 */
 	private String queryCRUDCliente = "SELECT * FROM almacen.crud_cliente(?,?,?)";
-	
+
 	/**
 	 * INSTANCIA DE ACCESO A DATOS
 	 */
 	@Autowired
 	private IGestionDAO<Cliente> daoCliente;
-	
-	
+
+
 	/**
 	 * Metodo que retorna una lista de clientes
-	 * 
+	 *
 	 * @param accion - 1. Todos los clientes, 2. Clientees Activos, 3. Clientees    inactivos
 	 * @return {@link Estatus<Cliente>} - Estado de la solicitud con lista
 	 */
@@ -43,7 +43,7 @@ public class ImplClienteService implements IClienteService{
 
 	/**
 	 * Metodo que permite crear, modificar, baja de clientes
-	 * 
+	 *
 	 * @param request - Información con los datos a guardar, con accion a realizar
 	 * @return {@link Estatus<Cliente>} - Estado de la solicitud
 	 */

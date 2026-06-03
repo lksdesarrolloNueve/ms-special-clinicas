@@ -3,14 +3,14 @@ package com.green.mx.model.request;
 import java.io.Serializable;
 
 public class RequestPermisos implements Serializable{
-	
+
 	/**
 	 * Serial ID de la clase
 	 */
 	private static final long serialVersionUID = -4659271876407893828L;
 
 	private String[] menus;
-	
+
 	private String rolID;
 
 	/**
@@ -40,8 +40,8 @@ public class RequestPermisos implements Serializable{
 	public void setRolID(String rolID) {
 		this.rolID = rolID;
 	}
-	
-	
-	
+
+
+
 
 }

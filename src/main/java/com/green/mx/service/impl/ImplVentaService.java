@@ -17,55 +17,55 @@ import com.green.mx.service.IVentaService;
 
 @Service
 public class ImplVentaService implements IVentaService {
-	
-	
+
+
 	/**
 	 * Query para CRUDS de ventas
 	 */
 	private String queryCRUDVenta = "SELECT * FROM almacen.crud_ventas(?,?,?,?)";
-	
+
 	/*
 	 * Query para listar ventas por forma de pago
 	 */
 	private String queryGetVentasXFPSesion = "SELECT * FROM almacen.get_ventas_x_form_pago_x_sesion(?,?);";
-	
+
 	/**
 	 * Query obtiene detalle de venta por clavee
 	 */
 	private String queryGetVentaCve = "SELECT * FROM almacen.get_venta(?,?);";
-	
+
 	/**
 	 * Query obtiene detalle de las ventas por fecha y usuario
 	 */
 	private String queryGetReimprimirTicket = "select * from almacen.get_reimprimirTicket(?,?);";
-	
+
 	/**
 	 * Instancia para acceso al DAO
 	 */
 	@Autowired
 	private IGestionDAO<String[]> crudVenta;
-	
+
 	/**
 	 * Instancia para listar Ventas por Forma de PAgo X sesion
 	 */
 	@Autowired
 	private IGestionDAO<VtaFPSesion> daoVFPSesion;
-	
+
 	/**
 	 * Instancia para listar ventas por clave
 	 */
 	@Autowired
 	private IGestionDAO<Venta> daoVentaCve;
-	
+
 	/**
 	 * Instancia para listar ventas por cajero y fecha
 	 */
 	@Autowired
 	private IGestionDAO<ReimprimirTicket> daoReimprimir;
-	
+
 	/**
 	 * Metodo que permite crear, modificar, baja de ventas
-	 * 
+	 *
 	 * @param request - Información con los datos a guardar, con accion a realizar
 	 * @return {@link Estatus<String[]>} - Estado de la solicitud
 	 */
@@ -82,7 +82,7 @@ public class ImplVentaService implements IVentaService {
 	 */
 	@Override
 	public Estatus<VtaFPSesion> getVentasXFPXSesion(Request reqBusqueda) {
-		return daoVFPSesion.getList(queryGetVentasXFPSesion, 
+		return daoVFPSesion.getList(queryGetVentasXFPSesion,
 				new Object[] {reqBusqueda.getDatos(),reqBusqueda.getAccion()}, new VtaFPSesionMapper());
 	}
 
@@ -94,7 +94,7 @@ public class ImplVentaService implements IVentaService {
 	 */
 	@Override
 	public Estatus<Venta> getVentaByCve(Request reqBusqueda) {
-		return daoVentaCve.getList(queryGetVentaCve, 
+		return daoVentaCve.getList(queryGetVentaCve,
 				new Object[] {reqBusqueda.getDatos(), reqBusqueda.getAccion()}, new VentaMapper());
 	}
 
@@ -111,5 +111,5 @@ public class ImplVentaService implements IVentaService {
 				new ReimprimirTicketMapper());
 	}
 
-	
+
 }

@@ -16,18 +16,18 @@ import com.green.mx.service.IStockService;
 @CrossOrigin("*")
 @RequestMapping("/warehouse")
 public class StockController {
-	
+
 	/**
 	 * Constante de JSON
 	 */
 	private static final String JSON_PROD_CONS = "application/json;charset=UTF-8";
-	
+
 	/**
 	 * Instancia de acceso al service
 	 */
 	@Autowired
 	private IStockService service;
-	
+
 	/**
 	 * API para obtener el stock de los productos en Almacenes
 	 * @param request - Datos a filtrar

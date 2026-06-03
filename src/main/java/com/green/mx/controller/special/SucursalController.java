@@ -20,7 +20,7 @@ import com.green.mx.service.IDinamicoService;
 @CrossOrigin("*")
 @RequestMapping("/special")
 public class SucursalController {
-	
+
 	/**
 	 * Constante JSON
 	 */
@@ -32,11 +32,11 @@ public class SucursalController {
 	// Instancia service dinamico
 	@Autowired
 	private IDinamicoService service;
-	
-	
+
+
 	/**
 	 * API que permite crear, modificar, baja de alamcenes
-	 * @param request - Información con los datos a guardar, con accion a realizar 
+	 * @param request - Información con los datos a guardar, con accion a realizar
 	 * @return {@link String} - Informacion general de la petición
 	 */
 	@PostMapping(path = "/sucursales",consumes = JSON_PROD_CONS,produces = JSON_PROD_CONS)

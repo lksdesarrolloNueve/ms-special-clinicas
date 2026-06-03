@@ -6,9 +6,9 @@ import java.sql.SQLException;
 import org.springframework.jdbc.core.RowMapper;
 
 public class ResponseJsonMapper implements RowMapper<String>{
-	
+
 	/**
-	 * MEtodo Mapper para el seteo de la cadena 
+	 * MEtodo Mapper para el seteo de la cadena
 	 * @return String - json a cadena
 	 */
 	@Override

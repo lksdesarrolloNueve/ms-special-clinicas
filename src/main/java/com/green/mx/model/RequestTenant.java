@@ -3,16 +3,16 @@ package com.green.mx.model;
 import java.util.UUID;
 
 public class RequestTenant {
-	
-	
+
+
 	/**
 	 * Json para CRUD
 	 */
 	private Object datos;
-	
+
 	private UUID tenantID;
-	
-	
+
+
 	/**
 	 * Accion a realizar 1.- Inserta, 2. Actualiza
 	 */
@@ -31,10 +31,10 @@ public class RequestTenant {
 	public void setDatos(Object datos) {
 		this.datos = datos;
 	}
-	
-	
-	
-	
+
+
+
+
 
 	public UUID getTenantID() {
 		return tenantID;
